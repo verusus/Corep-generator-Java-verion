@@ -1,0 +1,32 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace
+
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        order_updates: true
+        jdbc:
+          batch_size: 20
+        ddl-auto: none
+        default_schema: RCT_RSE_1
+        format_sql: true
+        dialect: org.hibernate.dialect.Oracle10gDialect
+    defer-datasource-initialization: false
+  datasource:
+    url: jdbc:oracle:thin:@db202112022020_high?TNS_ADMIN=D:\\projets\\Acceniom\\wallets\\BPCE_DEV_CLOUD
+    username: Admin
+    password: BPCE_moteur3!
+config:
+  D_REPORTING: "2022-03-31"
+  C_PERIMETRE: "HG_CE16"
+  C_DOC: "CR SA"
+  C_SUPERVISEUR: "ABE_V3.0"
+  OUT_DIRECTORY: "C:\\Users\\RabiiEzamzami\\Desktop\\generated_files"
